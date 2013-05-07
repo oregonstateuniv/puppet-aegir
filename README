@@ -1,4 +1,4 @@
-OSU CWS Puppet modules for Aegir
+Puppet module to configure an Aegir server
 
 # Copyright (C) 2013 Oregon State University
 #
@@ -24,3 +24,24 @@ OSU CWS Puppet modules for Aegir
 # 121 The Valley Library
 # Corvallis, OR 97331
 
+
+
+Developed by Central Web Services @ Oregonstate University
+http://drupal.oregonstate.edu
+
+Based on the aegir puppet module at http://drupal.org/project/puppet-aegir
+ - Enhanced and made to work on both Redhat and Debian systems.
+ - Modularlized for different Aegir server roles
+ - Includes NFS component for server packs
+ - Uses pear to install Drush for better cross-platform compatibility.
+
+Edit manifests/params.pp to change defaults or versions
+
+Module provides a number of classes which are used for the various roles of an Aegir server
+
+aegir               - Assign to all servers
+aegir::apache       - Assign to web servers and master
+aegir::mysql        - Assign to db servers and master
+aegir::hostmaster   - Assign only to master
+aegir::nfs::server  - Assign to NFS server (could be master) for server pack
+aegir::nfs::client  - Assign to NFS clients for server pack

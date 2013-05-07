@@ -1,4 +1,4 @@
-# Make sure memcached is 
+# Make sure memcached is
 #  - Installed
 #  - Configured
 #  - Running
@@ -6,7 +6,7 @@
 #
 # ---------------------------------
 
-class memcached {
+class aegir::memcached {
 
  package { 'memcached':
     ensure  => installed,
@@ -30,4 +30,3 @@ class memcached {
   }
 
 }
-
