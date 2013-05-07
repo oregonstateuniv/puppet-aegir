@@ -40,8 +40,10 @@ Edit manifests/params.pp to change defaults or versions
 Module provides a number of classes which are used for the various roles of an Aegir server
 
 aegir               - Assign to all servers
-aegir::apache       - Assign to web servers and master
-aegir::mysql        - Assign to db servers and master
+aegir::webserver    - Assign to web servers and master
+aegir::dbserver     - Assign to db servers and master
 aegir::hostmaster   - Assign only to master
 aegir::nfs::server  - Assign to NFS server (could be master) for server pack
 aegir::nfs::client  - Assign to NFS clients for server pack
+aegir::rproxy	    - Assign to varnish servers
+aegir::memcache	    - Assign to memcache servers 
